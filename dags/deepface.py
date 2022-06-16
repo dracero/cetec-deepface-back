@@ -26,7 +26,7 @@ def _get_photos():
     return [img1, img2, img3]
 
 def _validate(ti):
-    imgs = ti.xcom_pull(task_ids=['get_photos'])
+    imgs = ti.xcom_pull(task_ids=['get_photos'])[0]
     result = DeepFace.verify([[imgs[0], imgs[1]]],
 				  model_name = "VGG-Face",
 				  distance_metric = "cosine",
