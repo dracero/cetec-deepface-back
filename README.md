@@ -56,7 +56,9 @@ build: .
 ```
 
 ### Más info
-Más información sobre customización de Dockers con Apache Airflow: https://airflow.apache.org/docs/docker-stack/build.html
+Más información
+- Sobre el uso de Apache Airflow con Dockers: https://airflow.apache.org/docs/apache-airflow/stable/start/docker.html
+- Sobre customización de Dockers con Apache Airflow: https://airflow.apache.org/docs/docker-stack/build.html
 
 ## Ejecutar el Docker
 ```
