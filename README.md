@@ -5,7 +5,7 @@ Guardamos el docker-compose.yaml que nos provee Apache Airflow:
 curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.3.2/docker-compose.yaml'
 ```
 
-Este contiene:
+Apache Airflow usa Docker Compose para correr, por ser una aplicación multi-container:
 - airflow-scheduler: Monitorea y corre las tareas y DAGs.
 - airflow-webserver: Deja disponible al webserver en  http://localhost:8080.
 - airflow-worker: Ejecuta las tareas dadas por el scheduler.
@@ -62,11 +62,15 @@ Más información
 
 ## Ejecutar el Docker
 ```
-// Construimos la imagen Docker a partir de Dockerfile
+// Construimos la imagen Docker a partir de Dockerfile con Docker Compose v1
 docker-compose build
+// o con Docker Compose v2
+docker compose build
 
 // Ejecutamos el Docker
 docker-compose up
+// o con Docker Compose v2
+dockercompose up
 ```
 
 ## Agregar variables
