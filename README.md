@@ -69,3 +69,6 @@ docker-compose up
 
 ## Agregar variables
 Para agregar variables de entorno, acceder a la UI de Apache Airflow, y desde el menú Admin -> Variables.
+
+### Más info
+https://airflow.apache.org/docs/apache-airflow/stable/howto/variable.html

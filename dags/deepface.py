@@ -9,7 +9,7 @@ from deepface import DeepFace
 PRESENT = 'presente'
 ABSENT = 'ausente'
 
-def _validate(ti):
+def _validate():
     client = MongoClient(Variable.get("MONGO_URL"))
     db = client["myFirstDatabase"]
     col_attendance = db["attendance"]
@@ -36,7 +36,6 @@ def _complete_attendance():
     col_students = db["students"]
     for student in col_students.find({'state':{'$exists':False}}):
         col_students.update_one({'_id':student['_id']}, {"$set":{'state':ABSENT}})
-    return 'verified'
     
 
 with DAG(
