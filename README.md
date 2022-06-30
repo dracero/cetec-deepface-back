@@ -6,7 +6,7 @@ curl -LfO 'https://airflow.apache.org/docs/apache-airflow/2.3.2/docker-compose.y
 ```
 
 Este contiene:
-- airflow-scheduler: Monitorea y las corre las tareas y DAGs.
+- airflow-scheduler: Monitorea y corre las tareas y DAGs.
 - airflow-webserver: Deja disponible al webserver en  http://localhost:8080.
 - airflow-worker: Ejecuta las tareas dadas por el scheduler.
 - airflow-init: El servicio de inicialización.
@@ -56,7 +56,9 @@ build: .
 ```
 
 ### Más info
-Más información sobre customización de Dockers con Apache Airflow: https://airflow.apache.org/docs/docker-stack/build.html
+Más información
+- Sobre el uso de Apache Airflow con Dockers: https://airflow.apache.org/docs/apache-airflow/stable/start/docker.html
+- Sobre customización de Dockers con Apache Airflow: https://airflow.apache.org/docs/docker-stack/build.html
 
 ## Ejecutar el Docker
 ```
