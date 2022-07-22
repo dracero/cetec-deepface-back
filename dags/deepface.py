@@ -7,36 +7,41 @@ from pymongo import MongoClient
 from deepface import DeepFace
 
 PRESENT = 'presente'
-ABSENT = 'ausente'
+LATE = 'tarde'
 
 def _validate():
     client = MongoClient(Variable.get("MONGO_URL"))
     db = client["myFirstDatabase"]
-    col_attendance = db["attendance"]
+    col_attendances = db["attendances"]
     col_students = db["students"]
-    attendees = col_attendance.find()
+    col_verified = db["verified_attendances"]
+    col_exams = db["exams"]
+    attendees = col_attendances.find()
     
     for attendee in attendees:
-        course = attendee['course']
-        email = attendee['email']
-        student = col_students.find_one({'email':email, 'course':course})
+        student = col_students.find_one({'email':attendee['email']})
+        if not student:
+            continue
         
-        result = DeepFace.verify([[attendee['photo'], student['photo']]],
+        result = DeepFace.verify([[attendee['image'], student['photo']]],
                                 model_name = "VGG-Face",
                                 distance_metric = "cosine",
                                 detector_backend = "opencv"
         )
+        if not result["pair_1"]["verified"]:
+            continue
 
-        if result["pair_1"]["verified"]:
-            col_students.update_one({'_id':student['_id']}, {"$set":{'state':PRESENT}})
+        exam = col_exams.find_one({'course':attendee['course']})
+        if not exam:
+            continue
 
-def _complete_attendance():
-    client = MongoClient(Variable.get("MONGO_URL"))
-    db = client["myFirstDatabase"]
-    col_students = db["students"]
-    for student in col_students.find({'state':{'$exists':False}}):
-        col_students.update_one({'_id':student['_id']}, {"$set":{'state':ABSENT}})
-    
+        start_max_margin = exam['start'] + timedelta(minutes=exam['startMinutesMargin'])
+        start_min_margin = exam['start'] - timedelta(minutes=exam['startMinutesMargin'])
+        if start_min_margin <= attendee['date'] <= start_max_margin:
+            state = PRESENT
+        else:
+            state = LATE
+        col_verified.insert_one({'email': attendee['email'], 'course':attendee['course'], 'state':state, 'date':attendee['date']})
 
 with DAG(
     'Deepface',
@@ -59,11 +64,6 @@ with DAG(
         task_id = 'validate',
         python_callable=_validate
     )
-    
-    complete_attendance = PythonOperator(
-        task_id = 'complete_attendance',
-        python_callable=_complete_attendance
-    )
 
-    validate >> complete_attendance
+    validate
 
