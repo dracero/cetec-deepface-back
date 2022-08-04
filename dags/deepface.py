@@ -7,6 +7,16 @@ from pymongo import MongoClient
 from deepface import DeepFace
 
 PRESENT = 'presente'
+EXAM_DATE_MINUTES_MARGIN = 60
+
+def get_margin_limits(start, minutes_margin):
+    start_min_margin = start - timedelta(minutes=minutes_margin)
+    start_max_margin = start + timedelta(minutes=minutes_margin)
+    return (start_min_margin, start_max_margin)
+
+def find_exam(col_exams, course, start, minutes_margin):
+    start_min_margin, start_max_margin = get_margin_limits(start, minutes_margin)
+    return col_exams.find_one({'course':course, 'start' : {'$gte': start_min_margin, '$lt': start_max_margin}})
 
 def is_same_person(image1, image2):
     result = DeepFace.verify([[image1, image2]],
@@ -17,8 +27,7 @@ def is_same_person(image1, image2):
     return result["pair_1"]["verified"]
 
 def is_on_time(date, start, minutes_margin):
-    start_max_margin = start + timedelta(minutes=minutes_margin)
-    start_min_margin = start - timedelta(minutes=minutes_margin)
+    start_min_margin, start_max_margin = get_margin_limits(start, minutes_margin)
     return (start_min_margin <= date <= start_max_margin)
 
 def _validate():
@@ -35,8 +44,8 @@ def _validate():
         student = col_students.find_one({'email':attendee['email']})
         if not student:
             continue
-        
-        exam = col_exams.find_one({'course':attendee['course']})
+
+        exam = find_exam(col_exams, attendee['course'], attendee['date'], EXAM_DATE_MINUTES_MARGIN)
         if not exam:
             continue
 
@@ -61,7 +70,7 @@ with DAG(
         'retry_delay': timedelta(minutes=5),
     },
     description='Compare faces with Deepface',
-    schedule_interval=timedelta(days=1),
+    schedule_interval=None,
     start_date=datetime(2021, 1, 1),
     catchup=False,
     tags=['example'],
