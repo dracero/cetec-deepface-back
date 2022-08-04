@@ -7,7 +7,19 @@ from pymongo import MongoClient
 from deepface import DeepFace
 
 PRESENT = 'presente'
-LATE = 'tarde'
+
+def is_same_person(image1, image2):
+    result = DeepFace.verify([[image1, image2]],
+                            model_name = "VGG-Face",
+                            distance_metric = "cosine",
+                            detector_backend = "opencv"
+    )
+    return result["pair_1"]["verified"]
+
+def is_on_time(date, start, minutes_margin):
+    start_max_margin = start + timedelta(minutes=minutes_margin)
+    start_min_margin = start - timedelta(minutes=minutes_margin)
+    return (start_min_margin <= date <= start_max_margin)
 
 def _validate():
     client = MongoClient(Variable.get("MONGO_URL"))
@@ -16,32 +28,27 @@ def _validate():
     col_students = db["students"]
     col_verified = db["verified_attendances"]
     col_exams = db["exams"]
-    attendees = col_attendances.find()
+    not_verified = []
     
+    attendees = col_attendances.find()
     for attendee in attendees:
         student = col_students.find_one({'email':attendee['email']})
         if not student:
             continue
         
-        result = DeepFace.verify([[attendee['image'], student['photo']]],
-                                model_name = "VGG-Face",
-                                distance_metric = "cosine",
-                                detector_backend = "opencv"
-        )
-        if not result["pair_1"]["verified"]:
-            continue
-
         exam = col_exams.find_one({'course':attendee['course']})
         if not exam:
             continue
 
-        start_max_margin = exam['start'] + timedelta(minutes=exam['startMinutesMargin'])
-        start_min_margin = exam['start'] - timedelta(minutes=exam['startMinutesMargin'])
-        if start_min_margin <= attendee['date'] <= start_max_margin:
-            state = PRESENT
-        else:
-            state = LATE
-        col_verified.insert_one({'email': attendee['email'], 'course':attendee['course'], 'state':state, 'date':attendee['date']})
+        if not is_same_person(attendee['image'], student['image']):
+            not_verified.append((student['name'], student['email']))
+            continue
+
+        if is_on_time(attendee['date'], exam['start'], exam['startMinutesMargin']):
+            col_verified.insert_one({'email':attendee['email'], 'course':attendee['course'], 'state':PRESENT, 'date':attendee['date'], 'image':attendee['image']})
+            col_attendances.delete_one({'_id':attendee['_id']})
+    
+    print('NOT VERIFIED: ', not_verified)
 
 with DAG(
     'Deepface',
