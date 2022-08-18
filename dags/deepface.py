@@ -8,10 +8,17 @@ from pymongo import MongoClient
 from deepface import DeepFace
 import smtplib
 
+import smtplib
+from email.message import EmailMessage
+
 PRESENT = 'presente'
 LATE = 'tarde'
 EXAM_DATE_MINUTES_MARGIN = 60
 EXAM_EARLY_MARGIN = 30
+SUCCESS_SUBJECT = 'Alumnos verificados correctamente'
+SUCCESS_BODY = 'Todos los alumnos han sido reconocidos. No es necesario verificar la asistencia.'
+FAIL_SUBJECT = 'Verificar alumnos'
+FAIL_BODY = 'Los siguientes alumnos no fueron reconocidos correctamente. Por favor, verifique su asistencia:\n'
 
 def move_date(date, move_minutes):
     return date + timedelta(minutes=move_minutes)
@@ -41,6 +48,39 @@ def is_late(date, start, minutes_margin):
     late_margin = move_date(start, minutes_margin)
     return (start < date <= late_margin)
 
+def notify_unvalidated(not_verified):
+    gmail_user = Variable.get("EMAIL_USER")
+    gmail_password = Variable.get("EMAIL_PASSWORD")
+
+    for mail,students_to_verify in not_verified.items():
+        if not students_to_verify:
+            subject = SUCCESS_SUBJECT
+            body = SUCCESS_BODY
+        else:
+            subject = FAIL_SUBJECT
+            body = FAIL_BODY
+            for name,email in students_to_verify:
+                body += '     - ' + name + ' - ' + email + '\n'
+
+        msg = EmailMessage()
+        msg.set_content(body)
+        msg['Subject'] = subject
+        msg['From'] = gmail_user
+        msg['To'] = mail
+
+        try:
+            smtp_server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
+            smtp_server.ehlo()
+            smtp_server.login(gmail_user, gmail_password)
+            smtp_server.send_message(msg)
+            smtp_server.close()
+
+            print ("Email sent successfully!")
+
+        except Exception as ex:
+
+            print ("Something went wrong….",ex)
+
 def _validate():
     client = MongoClient(Variable.get("MONGO_URL"))
     db = client["myFirstDatabase"]
@@ -48,7 +88,7 @@ def _validate():
     col_students = db["students"]
     col_verified = db["verified_attendances"]
     col_exams = db["exams"]
-    not_verified = []
+    not_verified = {}
     
     attendees = col_attendances.find()
     for attendee in attendees:
@@ -61,7 +101,11 @@ def _validate():
             continue
 
         if not is_same_person(attendee['image'], student['image']):
-            not_verified.append((student['name'], student['email']))
+            info = (student['name'], student['email'])
+            if exam['email'] not in not_verified.keys():
+                not_verified[exam['email']] = []
+            not_verified[exam['email']].append(info)
+            col_attendances.delete_one({'_id':attendee['_id']})
             continue
 
         if is_on_time(attendee['date'], exam['start']):
@@ -71,6 +115,8 @@ def _validate():
 
         col_verified.insert_one({'email':attendee['email'], 'course':attendee['course'], 'state':state, 'date':attendee['date'], 'image':attendee['image']})
         col_attendances.delete_one({'_id':attendee['_id']})
+
+    notify_unvalidated(not_verified)
 
     
 with DAG(
