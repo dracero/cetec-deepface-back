@@ -1,3 +1,4 @@
+from email.message import EmailMessage
 from airflow import DAG
 from airflow.operators.python import PythonOperator
 from airflow.models import Variable
@@ -5,18 +6,24 @@ from airflow.models import Variable
 from datetime import datetime, timedelta
 from pymongo import MongoClient
 from deepface import DeepFace
+import smtplib
 
 PRESENT = 'presente'
+LATE = 'tarde'
 EXAM_DATE_MINUTES_MARGIN = 60
+EXAM_EARLY_MARGIN = 30
+
+def move_date(date, move_minutes):
+    return date + timedelta(minutes=move_minutes)
 
 def get_margin_limits(start, minutes_margin):
-    start_min_margin = start - timedelta(minutes=minutes_margin)
-    start_max_margin = start + timedelta(minutes=minutes_margin)
-    return (start_min_margin, start_max_margin)
+    begin_margin = move_date(start, -minutes_margin)
+    end_margin = move_date(start, minutes_margin)
+    return (begin_margin, end_margin)
 
 def find_exam(col_exams, course, start, minutes_margin):
-    start_min_margin, start_max_margin = get_margin_limits(start, minutes_margin)
-    return col_exams.find_one({'course':course, 'start' : {'$gte': start_min_margin, '$lt': start_max_margin}})
+    begin_margin, end_margin = get_margin_limits(start, minutes_margin)
+    return col_exams.find_one({'course':course, 'start' : {'$gte': begin_margin, '$lt': end_margin}})
 
 def is_same_person(image1, image2):
     result = DeepFace.verify([[image1, image2]],
@@ -26,9 +33,13 @@ def is_same_person(image1, image2):
     )
     return result["pair_1"]["verified"]
 
-def is_on_time(date, start, minutes_margin):
-    start_min_margin, start_max_margin = get_margin_limits(start, minutes_margin)
-    return (start_min_margin <= date <= start_max_margin)
+def is_on_time(date, start):
+    early_margin = move_date(start, -EXAM_EARLY_MARGIN)
+    return (early_margin <= date <= start)
+
+def is_late(date, start, minutes_margin):
+    late_margin = move_date(start, minutes_margin)
+    return (start < date <= late_margin)
 
 def _validate():
     client = MongoClient(Variable.get("MONGO_URL"))
@@ -53,12 +64,15 @@ def _validate():
             not_verified.append((student['name'], student['email']))
             continue
 
-        if is_on_time(attendee['date'], exam['start'], exam['startMinutesMargin']):
-            col_verified.insert_one({'email':attendee['email'], 'course':attendee['course'], 'state':PRESENT, 'date':attendee['date'], 'image':attendee['image']})
-            col_attendances.delete_one({'_id':attendee['_id']})
-    
-    print('NOT VERIFIED: ', not_verified)
+        if is_on_time(attendee['date'], exam['start']):
+            state = PRESENT
+        elif is_late(attendee['date'], exam['start'], exam['startMinutesMargin']):
+            state = LATE
 
+        col_verified.insert_one({'email':attendee['email'], 'course':attendee['course'], 'state':state, 'date':attendee['date'], 'image':attendee['image']})
+        col_attendances.delete_one({'_id':attendee['_id']})
+
+    
 with DAG(
     'Deepface',
     default_args={
