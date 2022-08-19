@@ -144,10 +144,14 @@ def _validate():
             col_attendances.delete_one({'_id':attendee['_id']})
             continue
 
+        state = ''
         if is_on_time(attendee['date'], exam['start']):
             state = PRESENT
         elif is_late(attendee['date'], exam['start'], exam['startMinutesMargin']):
             state = LATE
+        else:
+            col_attendances.delete_one({'_id':attendee['_id']})
+            continue
 
         col_verified.insert_one({'email':attendee['email'], 'course':attendee['course'], 'state':state, 'date':attendee['date'], 'image':attendee['image']})
         col_attendances.delete_one({'_id':attendee['_id']})
