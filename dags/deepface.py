@@ -119,13 +119,12 @@ def notify_unvalidated(not_verified):
 
 def _validate():
     client = MongoClient(Variable.get("MONGO_URL"))
-    db = client["myFirstDatabase"]
+    db = client["test"]
     col_attendances = db["attendances"]
     col_students = db["students"]
-    col_verified = db["verified_attendances"]
     col_exams = db["exams"]
     not_verified = {}
-    
+
     attendees = col_attendances.find()
     for attendee in attendees:
         student = col_students.find_one({'email':attendee['email']})
@@ -153,7 +152,12 @@ def _validate():
             col_attendances.delete_one({'_id':attendee['_id']})
             continue
 
-        col_verified.insert_one({'email':attendee['email'], 'course':attendee['course'], 'state':state, 'date':attendee['date'], 'image':attendee['image']})
+        newAttendance = {'date':attendee['date'], 'course':attendee['course'], 'state':state}
+        col_students.find_one_and_update(
+            { 'email': attendee['email'] },
+            { '$push': { 'attendances': newAttendance } },
+            { 'upsert': True }
+        )
         col_attendances.delete_one({'_id':attendee['_id']})
 
     notify_unvalidated(not_verified)

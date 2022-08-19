@@ -1,0 +1,499 @@
+[2022-08-19 15:37:47,144] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:37:47,147] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:37:47,147] {logging_mixin.py:115} INFO - [2022-08-19 15:37:47,147] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:37:47,150] {logging_mixin.py:115} INFO - [2022-08-19 15:37:47,149] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/deepface.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/deepface.py", line 159
+    { $push: { attendances: newAttendance } },
+      ^
+SyntaxError: invalid syntax
+[2022-08-19 15:37:47,151] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:37:47,194] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 0.064 seconds
+[2022-08-19 15:38:18,009] {processor.py:153} INFO - Started process (PID=95) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:38:18,010] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:38:18,015] {logging_mixin.py:115} INFO - [2022-08-19 15:38:18,014] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:38:18,019] {logging_mixin.py:115} INFO - [2022-08-19 15:38:18,018] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/deepface.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/deepface.py", line 159
+    { $push: { attendances: newAttendance } },
+      ^
+SyntaxError: invalid syntax
+[2022-08-19 15:38:18,019] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:38:18,052] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 0.053 seconds
+[2022-08-19 15:38:38,051] {processor.py:153} INFO - Started process (PID=148) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:38:38,052] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:38:38,054] {logging_mixin.py:115} INFO - [2022-08-19 15:38:38,054] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:38:40,779] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:38:40,799] {logging_mixin.py:115} INFO - [2022-08-19 15:38:40,798] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 15:38:40,818] {logging_mixin.py:115} INFO - [2022-08-19 15:38:40,818] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 15:38:40,834] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.795 seconds
+[2022-08-19 15:38:42,881] {processor.py:153} INFO - Started process (PID=157) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:38:42,882] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:38:42,882] {logging_mixin.py:115} INFO - [2022-08-19 15:38:42,882] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:38:45,868] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:38:45,898] {logging_mixin.py:115} INFO - [2022-08-19 15:38:45,897] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 15:38:45,921] {logging_mixin.py:115} INFO - [2022-08-19 15:38:45,921] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 15:38:45,937] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.060 seconds
+[2022-08-19 15:38:52,587] {processor.py:153} INFO - Started process (PID=171) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:38:52,588] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:38:52,588] {logging_mixin.py:115} INFO - [2022-08-19 15:38:52,588] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:38:55,772] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:38:55,799] {logging_mixin.py:115} INFO - [2022-08-19 15:38:55,799] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 15:38:55,835] {logging_mixin.py:115} INFO - [2022-08-19 15:38:55,834] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 15:38:55,865] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.282 seconds
+[2022-08-19 15:39:26,474] {processor.py:153} INFO - Started process (PID=238) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:39:26,476] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:39:26,477] {logging_mixin.py:115} INFO - [2022-08-19 15:39:26,477] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:39:29,887] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:39:29,928] {logging_mixin.py:115} INFO - [2022-08-19 15:39:29,928] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 15:39:29,953] {logging_mixin.py:115} INFO - [2022-08-19 15:39:29,953] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 15:39:29,968] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.497 seconds
+[2022-08-19 15:40:00,232] {processor.py:153} INFO - Started process (PID=309) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:40:00,234] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:40:00,239] {logging_mixin.py:115} INFO - [2022-08-19 15:40:00,236] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:40:03,042] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:40:03,073] {logging_mixin.py:115} INFO - [2022-08-19 15:40:03,072] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 15:40:03,113] {logging_mixin.py:115} INFO - [2022-08-19 15:40:03,112] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 15:40:03,139] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.922 seconds
+[2022-08-19 15:40:19,551] {processor.py:153} INFO - Started process (PID=341) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:40:19,551] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:40:19,551] {logging_mixin.py:115} INFO - [2022-08-19 15:40:19,551] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:40:22,371] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:40:22,414] {logging_mixin.py:115} INFO - [2022-08-19 15:40:22,413] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 15:40:22,454] {logging_mixin.py:115} INFO - [2022-08-19 15:40:22,454] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 15:40:22,481] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.934 seconds
+[2022-08-19 15:40:53,152] {processor.py:153} INFO - Started process (PID=397) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:40:53,312] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:40:53,314] {logging_mixin.py:115} INFO - [2022-08-19 15:40:53,314] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:40:56,557] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:40:56,580] {logging_mixin.py:115} INFO - [2022-08-19 15:40:56,579] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 15:40:56,600] {logging_mixin.py:115} INFO - [2022-08-19 15:40:56,600] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 15:40:56,613] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.476 seconds
+[2022-08-19 15:41:26,665] {processor.py:153} INFO - Started process (PID=468) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:41:26,666] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:41:26,666] {logging_mixin.py:115} INFO - [2022-08-19 15:41:26,666] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:41:29,350] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:41:29,377] {logging_mixin.py:115} INFO - [2022-08-19 15:41:29,377] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 15:41:29,404] {logging_mixin.py:115} INFO - [2022-08-19 15:41:29,404] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 15:41:29,417] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.755 seconds
+[2022-08-19 15:41:59,579] {processor.py:153} INFO - Started process (PID=542) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:41:59,579] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:41:59,580] {logging_mixin.py:115} INFO - [2022-08-19 15:41:59,580] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:42:02,490] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:42:02,510] {logging_mixin.py:115} INFO - [2022-08-19 15:42:02,509] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 15:42:02,532] {logging_mixin.py:115} INFO - [2022-08-19 15:42:02,532] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 15:42:02,548] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.972 seconds
+[2022-08-19 15:42:33,180] {processor.py:153} INFO - Started process (PID=608) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:42:33,181] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:42:33,182] {logging_mixin.py:115} INFO - [2022-08-19 15:42:33,181] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:42:35,855] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:42:35,882] {logging_mixin.py:115} INFO - [2022-08-19 15:42:35,882] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 15:42:35,904] {logging_mixin.py:115} INFO - [2022-08-19 15:42:35,904] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 15:42:35,918] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.744 seconds
+[2022-08-19 15:43:06,400] {processor.py:153} INFO - Started process (PID=679) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:43:06,410] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:43:06,412] {logging_mixin.py:115} INFO - [2022-08-19 15:43:06,411] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:43:08,944] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:43:08,966] {logging_mixin.py:115} INFO - [2022-08-19 15:43:08,966] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 15:43:08,989] {logging_mixin.py:115} INFO - [2022-08-19 15:43:08,989] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 15:43:09,003] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.622 seconds
+[2022-08-19 15:43:57,593] {processor.py:153} INFO - Started process (PID=40) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:43:57,594] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:43:57,595] {logging_mixin.py:115} INFO - [2022-08-19 15:43:57,595] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:44:06,405] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:44:06,438] {logging_mixin.py:115} INFO - [2022-08-19 15:44:06,438] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 15:44:06,464] {logging_mixin.py:115} INFO - [2022-08-19 15:44:06,464] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 15:44:06,666] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 9.096 seconds
+[2022-08-19 15:44:09,403] {processor.py:153} INFO - Started process (PID=78) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:44:09,404] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:44:09,405] {logging_mixin.py:115} INFO - [2022-08-19 15:44:09,405] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:44:12,052] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:44:12,074] {logging_mixin.py:115} INFO - [2022-08-19 15:44:12,074] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 15:44:12,259] {logging_mixin.py:115} INFO - [2022-08-19 15:44:12,259] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 15:44:12,277] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.877 seconds
+[2022-08-19 15:44:42,388] {processor.py:153} INFO - Started process (PID=140) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 15:44:42,392] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 15:44:42,394] {logging_mixin.py:115} INFO - [2022-08-19 15:44:42,393] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 15:44:45,068] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 15:44:45,095] {logging_mixin.py:115} INFO - [2022-08-19 15:44:45,094] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 15:44:45,272] {logging_mixin.py:115} INFO - [2022-08-19 15:44:45,272] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 15:44:45,286] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.910 seconds
+[2022-08-19 16:13:48,075] {processor.py:153} INFO - Started process (PID=33) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:13:48,078] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:13:48,079] {logging_mixin.py:115} INFO - [2022-08-19 16:13:48,078] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:13:54,791] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:13:54,831] {logging_mixin.py:115} INFO - [2022-08-19 16:13:54,830] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:13:54,863] {logging_mixin.py:115} INFO - [2022-08-19 16:13:54,863] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:13:55,002] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 6.934 seconds
+[2022-08-19 16:14:25,154] {processor.py:153} INFO - Started process (PID=111) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:14:25,156] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:14:25,156] {logging_mixin.py:115} INFO - [2022-08-19 16:14:25,156] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:14:31,663] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:14:31,748] {logging_mixin.py:115} INFO - [2022-08-19 16:14:31,745] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:14:32,076] {logging_mixin.py:115} INFO - [2022-08-19 16:14:32,076] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:14:32,117] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 6.966 seconds
+[2022-08-19 16:15:02,675] {processor.py:153} INFO - Started process (PID=193) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:15:02,676] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:15:02,676] {logging_mixin.py:115} INFO - [2022-08-19 16:15:02,676] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:15:05,963] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:15:05,988] {logging_mixin.py:115} INFO - [2022-08-19 16:15:05,987] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:15:06,160] {logging_mixin.py:115} INFO - [2022-08-19 16:15:06,160] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:15:06,175] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.503 seconds
+[2022-08-19 16:15:36,860] {processor.py:153} INFO - Started process (PID=255) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:15:36,863] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:15:36,865] {logging_mixin.py:115} INFO - [2022-08-19 16:15:36,865] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:15:41,330] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:15:41,359] {logging_mixin.py:115} INFO - [2022-08-19 16:15:41,358] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:15:41,599] {logging_mixin.py:115} INFO - [2022-08-19 16:15:41,598] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:15:41,654] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 4.797 seconds
+[2022-08-19 16:16:12,342] {processor.py:153} INFO - Started process (PID=319) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:16:12,342] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:16:12,343] {logging_mixin.py:115} INFO - [2022-08-19 16:16:12,343] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:16:15,335] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:16:15,356] {logging_mixin.py:115} INFO - [2022-08-19 16:16:15,356] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:16:15,506] {logging_mixin.py:115} INFO - [2022-08-19 16:16:15,506] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:16:15,518] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.180 seconds
+[2022-08-19 16:16:46,143] {processor.py:153} INFO - Started process (PID=380) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:16:46,144] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:16:46,145] {logging_mixin.py:115} INFO - [2022-08-19 16:16:46,145] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:16:49,023] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:16:49,042] {logging_mixin.py:115} INFO - [2022-08-19 16:16:49,042] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:16:49,182] {logging_mixin.py:115} INFO - [2022-08-19 16:16:49,182] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:16:49,196] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.057 seconds
+[2022-08-19 16:17:19,793] {processor.py:153} INFO - Started process (PID=434) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:17:19,796] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:17:19,796] {logging_mixin.py:115} INFO - [2022-08-19 16:17:19,796] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:17:22,712] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:17:22,736] {logging_mixin.py:115} INFO - [2022-08-19 16:17:22,735] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:17:22,871] {logging_mixin.py:115} INFO - [2022-08-19 16:17:22,871] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:17:22,886] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.097 seconds
+[2022-08-19 16:24:18,175] {processor.py:153} INFO - Started process (PID=42) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:24:18,177] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:24:18,178] {logging_mixin.py:115} INFO - [2022-08-19 16:24:18,177] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:24:24,718] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:24:24,741] {logging_mixin.py:115} INFO - [2022-08-19 16:24:24,741] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:24:24,774] {logging_mixin.py:115} INFO - [2022-08-19 16:24:24,774] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:24:24,975] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 6.811 seconds
+[2022-08-19 16:24:55,829] {processor.py:153} INFO - Started process (PID=119) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:24:55,831] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:24:55,832] {logging_mixin.py:115} INFO - [2022-08-19 16:24:55,832] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:25:00,010] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:25:00,049] {logging_mixin.py:115} INFO - [2022-08-19 16:25:00,049] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:25:00,264] {logging_mixin.py:115} INFO - [2022-08-19 16:25:00,264] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:25:00,275] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 4.449 seconds
+[2022-08-19 16:25:30,356] {processor.py:153} INFO - Started process (PID=199) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:25:30,357] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:25:30,359] {logging_mixin.py:115} INFO - [2022-08-19 16:25:30,359] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:25:33,312] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:25:33,333] {logging_mixin.py:115} INFO - [2022-08-19 16:25:33,332] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:25:33,471] {logging_mixin.py:115} INFO - [2022-08-19 16:25:33,471] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:25:33,485] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.131 seconds
+[2022-08-19 16:26:03,937] {processor.py:153} INFO - Started process (PID=255) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:26:03,937] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:26:03,937] {logging_mixin.py:115} INFO - [2022-08-19 16:26:03,937] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:26:06,818] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:26:06,840] {logging_mixin.py:115} INFO - [2022-08-19 16:26:06,840] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:26:07,001] {logging_mixin.py:115} INFO - [2022-08-19 16:26:07,001] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:26:07,014] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.081 seconds
+[2022-08-19 16:31:09,198] {processor.py:153} INFO - Started process (PID=40) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:31:09,213] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:31:09,213] {logging_mixin.py:115} INFO - [2022-08-19 16:31:09,213] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:31:17,244] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:31:17,288] {logging_mixin.py:115} INFO - [2022-08-19 16:31:17,288] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:31:17,361] {logging_mixin.py:115} INFO - [2022-08-19 16:31:17,361] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:31:17,588] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 8.410 seconds
+[2022-08-19 16:31:47,973] {processor.py:153} INFO - Started process (PID=111) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:31:47,978] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:31:47,979] {logging_mixin.py:115} INFO - [2022-08-19 16:31:47,979] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:31:53,943] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:31:54,006] {logging_mixin.py:115} INFO - [2022-08-19 16:31:54,005] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:31:54,325] {logging_mixin.py:115} INFO - [2022-08-19 16:31:54,325] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:31:54,339] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 6.384 seconds
+[2022-08-19 16:32:25,066] {processor.py:153} INFO - Started process (PID=188) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:32:25,075] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:32:25,076] {logging_mixin.py:115} INFO - [2022-08-19 16:32:25,076] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:32:28,066] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:32:28,093] {logging_mixin.py:115} INFO - [2022-08-19 16:32:28,093] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:32:28,304] {logging_mixin.py:115} INFO - [2022-08-19 16:32:28,304] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:32:28,325] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.281 seconds
+[2022-08-19 16:32:58,753] {processor.py:153} INFO - Started process (PID=254) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:32:58,753] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:32:58,754] {logging_mixin.py:115} INFO - [2022-08-19 16:32:58,753] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:33:01,480] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:33:01,502] {logging_mixin.py:115} INFO - [2022-08-19 16:33:01,502] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:33:01,691] {logging_mixin.py:115} INFO - [2022-08-19 16:33:01,691] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:33:01,709] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.959 seconds
+[2022-08-19 16:33:32,215] {processor.py:153} INFO - Started process (PID=317) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:33:32,217] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:33:32,218] {logging_mixin.py:115} INFO - [2022-08-19 16:33:32,218] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:33:35,340] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:33:35,360] {logging_mixin.py:115} INFO - [2022-08-19 16:33:35,359] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:33:35,560] {logging_mixin.py:115} INFO - [2022-08-19 16:33:35,560] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:33:35,578] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.375 seconds
+[2022-08-19 16:36:16,550] {processor.py:153} INFO - Started process (PID=41) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:36:16,551] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:36:16,561] {logging_mixin.py:115} INFO - [2022-08-19 16:36:16,560] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:36:21,774] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:36:21,842] {logging_mixin.py:115} INFO - [2022-08-19 16:36:21,841] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:36:21,887] {logging_mixin.py:115} INFO - [2022-08-19 16:36:21,887] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:36:22,248] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 5.744 seconds
+[2022-08-19 16:36:52,962] {processor.py:153} INFO - Started process (PID=110) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:36:52,966] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:36:52,967] {logging_mixin.py:115} INFO - [2022-08-19 16:36:52,967] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:36:55,954] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:36:55,985] {logging_mixin.py:115} INFO - [2022-08-19 16:36:55,984] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:36:56,136] {logging_mixin.py:115} INFO - [2022-08-19 16:36:56,136] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:36:56,149] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.190 seconds
+[2022-08-19 16:37:26,225] {processor.py:153} INFO - Started process (PID=182) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:37:26,239] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:37:26,239] {logging_mixin.py:115} INFO - [2022-08-19 16:37:26,239] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:37:29,192] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:37:29,211] {logging_mixin.py:115} INFO - [2022-08-19 16:37:29,211] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:37:29,352] {logging_mixin.py:115} INFO - [2022-08-19 16:37:29,352] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:37:29,373] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.153 seconds
+[2022-08-19 16:37:59,738] {processor.py:153} INFO - Started process (PID=255) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:37:59,739] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:37:59,739] {logging_mixin.py:115} INFO - [2022-08-19 16:37:59,739] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:38:02,357] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:38:02,378] {logging_mixin.py:115} INFO - [2022-08-19 16:38:02,377] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:38:02,513] {logging_mixin.py:115} INFO - [2022-08-19 16:38:02,513] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:38:02,529] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.794 seconds
+[2022-08-19 16:38:32,896] {processor.py:153} INFO - Started process (PID=318) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:38:32,896] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:38:32,897] {logging_mixin.py:115} INFO - [2022-08-19 16:38:32,897] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:38:35,848] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:38:35,870] {logging_mixin.py:115} INFO - [2022-08-19 16:38:35,869] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:38:36,048] {logging_mixin.py:115} INFO - [2022-08-19 16:38:36,048] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:38:36,064] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.171 seconds
+[2022-08-19 16:39:06,405] {processor.py:153} INFO - Started process (PID=379) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:39:06,408] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:39:06,409] {logging_mixin.py:115} INFO - [2022-08-19 16:39:06,409] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:39:09,580] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:39:09,615] {logging_mixin.py:115} INFO - [2022-08-19 16:39:09,615] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:39:09,780] {logging_mixin.py:115} INFO - [2022-08-19 16:39:09,780] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:39:09,799] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.400 seconds
+[2022-08-19 16:39:40,442] {processor.py:153} INFO - Started process (PID=431) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:39:40,443] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:39:40,443] {logging_mixin.py:115} INFO - [2022-08-19 16:39:40,443] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:39:43,508] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:39:43,535] {logging_mixin.py:115} INFO - [2022-08-19 16:39:43,535] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:39:43,710] {logging_mixin.py:115} INFO - [2022-08-19 16:39:43,710] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:39:43,738] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.304 seconds
+[2022-08-19 16:40:13,915] {processor.py:153} INFO - Started process (PID=493) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:40:13,916] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:40:13,916] {logging_mixin.py:115} INFO - [2022-08-19 16:40:13,916] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:40:16,548] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:40:16,572] {logging_mixin.py:115} INFO - [2022-08-19 16:40:16,572] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:40:16,768] {logging_mixin.py:115} INFO - [2022-08-19 16:40:16,768] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:40:16,785] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.873 seconds
+[2022-08-19 16:40:47,536] {processor.py:153} INFO - Started process (PID=559) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:40:47,536] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:40:47,537] {logging_mixin.py:115} INFO - [2022-08-19 16:40:47,537] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:40:50,847] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:40:50,879] {logging_mixin.py:115} INFO - [2022-08-19 16:40:50,879] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:40:51,088] {logging_mixin.py:115} INFO - [2022-08-19 16:40:51,088] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:40:51,109] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.577 seconds
+[2022-08-19 16:41:22,079] {processor.py:153} INFO - Started process (PID=622) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:41:22,080] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:41:22,082] {logging_mixin.py:115} INFO - [2022-08-19 16:41:22,082] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:41:24,992] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:41:25,026] {logging_mixin.py:115} INFO - [2022-08-19 16:41:25,026] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:41:25,206] {logging_mixin.py:115} INFO - [2022-08-19 16:41:25,206] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:41:25,222] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.155 seconds
+[2022-08-19 16:41:55,587] {processor.py:153} INFO - Started process (PID=685) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:41:55,588] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:41:55,589] {logging_mixin.py:115} INFO - [2022-08-19 16:41:55,589] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:41:58,670] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:41:58,694] {logging_mixin.py:115} INFO - [2022-08-19 16:41:58,694] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:41:58,918] {logging_mixin.py:115} INFO - [2022-08-19 16:41:58,918] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:41:58,945] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.367 seconds
+[2022-08-19 16:42:29,286] {processor.py:153} INFO - Started process (PID=750) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:42:29,348] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:42:29,350] {logging_mixin.py:115} INFO - [2022-08-19 16:42:29,350] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:42:32,489] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:42:32,511] {logging_mixin.py:115} INFO - [2022-08-19 16:42:32,511] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:42:32,641] {logging_mixin.py:115} INFO - [2022-08-19 16:42:32,641] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:42:32,675] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.395 seconds
+[2022-08-19 16:43:02,743] {processor.py:153} INFO - Started process (PID=807) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:43:02,746] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:43:02,749] {logging_mixin.py:115} INFO - [2022-08-19 16:43:02,749] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:43:06,215] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:43:06,252] {logging_mixin.py:115} INFO - [2022-08-19 16:43:06,251] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:43:06,462] {logging_mixin.py:115} INFO - [2022-08-19 16:43:06,462] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:43:06,479] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.740 seconds
+[2022-08-19 16:43:36,755] {processor.py:153} INFO - Started process (PID=880) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:43:36,755] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:43:36,756] {logging_mixin.py:115} INFO - [2022-08-19 16:43:36,756] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:43:39,770] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:43:39,789] {logging_mixin.py:115} INFO - [2022-08-19 16:43:39,788] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:43:39,920] {logging_mixin.py:115} INFO - [2022-08-19 16:43:39,920] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:43:39,935] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.183 seconds
+[2022-08-19 16:43:52,040] {processor.py:153} INFO - Started process (PID=908) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:43:52,041] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:43:52,043] {logging_mixin.py:115} INFO - [2022-08-19 16:43:52,043] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:43:52,058] {logging_mixin.py:115} INFO - [2022-08-19 16:43:52,050] {dagbag.py:320} ERROR - Failed to import: /opt/airflow/dags/deepface.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 317, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 724, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 860, in get_code
+  File "<frozen importlib._bootstrap_external>", line 791, in source_to_code
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/deepface.py", line 167
+    print("new"): ", new)
+                        ^
+SyntaxError: EOL while scanning string literal
+[2022-08-19 16:43:52,059] {processor.py:653} WARNING - No viable dags retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:43:52,113] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 0.085 seconds
+[2022-08-19 16:44:01,193] {processor.py:153} INFO - Started process (PID=919) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:44:01,194] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:44:01,195] {logging_mixin.py:115} INFO - [2022-08-19 16:44:01,195] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:44:04,144] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:44:04,166] {logging_mixin.py:115} INFO - [2022-08-19 16:44:04,165] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:44:04,314] {logging_mixin.py:115} INFO - [2022-08-19 16:44:04,314] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:44:04,337] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.151 seconds
+[2022-08-19 16:44:35,246] {processor.py:153} INFO - Started process (PID=987) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:44:35,247] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:44:35,249] {logging_mixin.py:115} INFO - [2022-08-19 16:44:35,248] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:44:38,116] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:44:38,138] {logging_mixin.py:115} INFO - [2022-08-19 16:44:38,137] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:44:38,283] {logging_mixin.py:115} INFO - [2022-08-19 16:44:38,283] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:44:38,295] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.057 seconds
+[2022-08-19 16:45:08,871] {processor.py:153} INFO - Started process (PID=1057) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:45:08,872] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:45:08,872] {logging_mixin.py:115} INFO - [2022-08-19 16:45:08,872] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:45:15,026] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:45:15,096] {logging_mixin.py:115} INFO - [2022-08-19 16:45:15,096] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:45:15,458] {logging_mixin.py:115} INFO - [2022-08-19 16:45:15,458] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:45:15,488] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 6.621 seconds
+[2022-08-19 16:45:46,262] {processor.py:153} INFO - Started process (PID=1135) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:45:46,262] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:45:46,262] {logging_mixin.py:115} INFO - [2022-08-19 16:45:46,262] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:45:50,118] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:45:50,138] {logging_mixin.py:115} INFO - [2022-08-19 16:45:50,138] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:45:50,289] {logging_mixin.py:115} INFO - [2022-08-19 16:45:50,289] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:45:50,301] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 4.043 seconds
+[2022-08-19 16:46:21,227] {processor.py:153} INFO - Started process (PID=1203) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:46:21,228] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:46:21,232] {logging_mixin.py:115} INFO - [2022-08-19 16:46:21,232] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:46:23,956] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:46:23,983] {logging_mixin.py:115} INFO - [2022-08-19 16:46:23,982] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:46:24,164] {logging_mixin.py:115} INFO - [2022-08-19 16:46:24,163] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:46:24,178] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.966 seconds
+[2022-08-19 16:47:21,967] {processor.py:153} INFO - Started process (PID=40) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:47:21,977] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:47:21,978] {logging_mixin.py:115} INFO - [2022-08-19 16:47:21,978] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:47:30,409] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:47:30,462] {logging_mixin.py:115} INFO - [2022-08-19 16:47:30,461] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:47:30,513] {logging_mixin.py:115} INFO - [2022-08-19 16:47:30,513] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:47:30,875] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 8.935 seconds
+[2022-08-19 16:48:01,093] {processor.py:153} INFO - Started process (PID=115) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:48:01,094] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:48:01,095] {logging_mixin.py:115} INFO - [2022-08-19 16:48:01,095] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:48:05,002] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:48:05,025] {logging_mixin.py:115} INFO - [2022-08-19 16:48:05,024] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:48:05,206] {logging_mixin.py:115} INFO - [2022-08-19 16:48:05,205] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:48:05,219] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 4.130 seconds
+[2022-08-19 16:48:17,292] {processor.py:153} INFO - Started process (PID=147) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:48:17,293] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:48:17,293] {logging_mixin.py:115} INFO - [2022-08-19 16:48:17,293] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:48:19,840] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:48:19,857] {logging_mixin.py:115} INFO - [2022-08-19 16:48:19,857] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:48:19,983] {logging_mixin.py:115} INFO - [2022-08-19 16:48:19,983] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:48:19,999] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.709 seconds
+[2022-08-19 16:48:21,063] {processor.py:153} INFO - Started process (PID=149) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:48:21,064] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:48:21,066] {logging_mixin.py:115} INFO - [2022-08-19 16:48:21,066] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:48:23,914] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:48:23,934] {logging_mixin.py:115} INFO - [2022-08-19 16:48:23,933] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:48:24,090] {logging_mixin.py:115} INFO - [2022-08-19 16:48:24,090] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:48:24,107] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.054 seconds
+[2022-08-19 16:48:26,294] {processor.py:153} INFO - Started process (PID=164) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:48:26,294] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:48:26,295] {logging_mixin.py:115} INFO - [2022-08-19 16:48:26,295] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:48:29,215] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:48:29,246] {logging_mixin.py:115} INFO - [2022-08-19 16:48:29,245] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:48:29,431] {logging_mixin.py:115} INFO - [2022-08-19 16:48:29,431] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:48:29,454] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.164 seconds
+[2022-08-19 16:49:10,737] {processor.py:153} INFO - Started process (PID=41) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:49:11,156] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:49:11,157] {logging_mixin.py:115} INFO - [2022-08-19 16:49:11,157] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:49:17,005] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:49:17,043] {logging_mixin.py:115} INFO - [2022-08-19 16:49:17,042] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:49:17,075] {logging_mixin.py:115} INFO - [2022-08-19 16:49:17,075] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:49:17,306] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 6.578 seconds
+[2022-08-19 16:49:49,047] {processor.py:153} INFO - Started process (PID=118) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:49:49,054] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:49:49,056] {logging_mixin.py:115} INFO - [2022-08-19 16:49:49,056] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:50:02,201] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:50:02,224] {logging_mixin.py:115} INFO - [2022-08-19 16:50:02,224] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:50:02,402] {logging_mixin.py:115} INFO - [2022-08-19 16:50:02,402] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:50:02,436] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 13.393 seconds
+[2022-08-19 16:50:33,144] {processor.py:153} INFO - Started process (PID=200) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:50:33,146] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:50:33,146] {logging_mixin.py:115} INFO - [2022-08-19 16:50:33,146] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:50:35,982] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:50:36,005] {logging_mixin.py:115} INFO - [2022-08-19 16:50:36,005] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:50:36,199] {logging_mixin.py:115} INFO - [2022-08-19 16:50:36,199] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:50:36,220] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.079 seconds
+[2022-08-19 16:51:06,707] {processor.py:153} INFO - Started process (PID=262) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:51:06,708] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:51:06,710] {logging_mixin.py:115} INFO - [2022-08-19 16:51:06,710] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:51:09,570] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:51:09,595] {logging_mixin.py:115} INFO - [2022-08-19 16:51:09,595] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:51:09,759] {logging_mixin.py:115} INFO - [2022-08-19 16:51:09,759] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:51:09,773] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.077 seconds
+[2022-08-19 16:51:40,052] {processor.py:153} INFO - Started process (PID=316) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:51:40,053] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:51:40,053] {logging_mixin.py:115} INFO - [2022-08-19 16:51:40,053] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:51:42,925] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:51:42,946] {logging_mixin.py:115} INFO - [2022-08-19 16:51:42,945] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:51:43,116] {logging_mixin.py:115} INFO - [2022-08-19 16:51:43,116] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:51:43,132] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.083 seconds
+[2022-08-19 16:51:55,010] {processor.py:153} INFO - Started process (PID=356) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:51:55,015] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:51:55,016] {logging_mixin.py:115} INFO - [2022-08-19 16:51:55,016] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:51:57,604] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:51:57,623] {logging_mixin.py:115} INFO - [2022-08-19 16:51:57,623] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:51:57,788] {logging_mixin.py:115} INFO - [2022-08-19 16:51:57,788] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:51:57,807] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.804 seconds
+[2022-08-19 16:52:28,064] {processor.py:153} INFO - Started process (PID=422) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:52:28,064] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:52:28,065] {logging_mixin.py:115} INFO - [2022-08-19 16:52:28,065] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:52:30,735] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:52:30,755] {logging_mixin.py:115} INFO - [2022-08-19 16:52:30,755] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:52:30,922] {logging_mixin.py:115} INFO - [2022-08-19 16:52:30,922] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:52:30,936] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.875 seconds
+[2022-08-19 16:53:01,680] {processor.py:153} INFO - Started process (PID=489) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:53:01,681] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:53:01,682] {logging_mixin.py:115} INFO - [2022-08-19 16:53:01,682] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:53:04,401] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:53:04,420] {logging_mixin.py:115} INFO - [2022-08-19 16:53:04,419] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:53:04,595] {logging_mixin.py:115} INFO - [2022-08-19 16:53:04,595] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:53:04,614] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.941 seconds
+[2022-08-19 16:53:35,594] {processor.py:153} INFO - Started process (PID=551) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:53:35,595] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:53:35,595] {logging_mixin.py:115} INFO - [2022-08-19 16:53:35,595] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:53:38,314] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:53:38,339] {logging_mixin.py:115} INFO - [2022-08-19 16:53:38,338] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:53:38,513] {logging_mixin.py:115} INFO - [2022-08-19 16:53:38,513] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:53:38,531] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 2.941 seconds
+[2022-08-19 16:54:08,913] {processor.py:153} INFO - Started process (PID=614) to work on /opt/airflow/dags/deepface.py
+[2022-08-19 16:54:08,916] {processor.py:641} INFO - Processing file /opt/airflow/dags/deepface.py for tasks to queue
+[2022-08-19 16:54:08,917] {logging_mixin.py:115} INFO - [2022-08-19 16:54:08,916] {dagbag.py:507} INFO - Filling up the DagBag from /opt/airflow/dags/deepface.py
+[2022-08-19 16:54:12,254] {processor.py:651} INFO - DAG(s) dict_keys(['Deepface']) retrieved from /opt/airflow/dags/deepface.py
+[2022-08-19 16:54:12,282] {logging_mixin.py:115} INFO - [2022-08-19 16:54:12,282] {dag.py:2379} INFO - Sync 1 DAGs
+[2022-08-19 16:54:12,491] {logging_mixin.py:115} INFO - [2022-08-19 16:54:12,491] {dag.py:2931} INFO - Setting next_dagrun for Deepface to None, run_after=None
+[2022-08-19 16:54:12,510] {processor.py:161} INFO - Processing /opt/airflow/dags/deepface.py took 3.601 seconds

@@ -1,0 +1,40 @@
+[2022-08-19 16:49:44,031] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Deepface.validate manual__2022-08-19T16:49:39.469399+00:00 [queued]>
+[2022-08-19 16:49:44,226] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Deepface.validate manual__2022-08-19T16:49:39.469399+00:00 [queued]>
+[2022-08-19 16:49:44,226] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-19 16:49:44,226] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-08-19 16:49:44,226] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-19 16:49:44,245] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): validate> on 2022-08-19 16:49:39.469399+00:00
+[2022-08-19 16:49:44,254] {standard_task_runner.py:52} INFO - Started process 78 to run task
+[2022-08-19 16:49:44,258] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Deepface', 'validate', 'manual__2022-08-19T16:49:39.469399+00:00', '--job-id', '124', '--raw', '--subdir', 'DAGS_FOLDER/deepface.py', '--cfg-path', '/tmp/tmp3ox996jd', '--error-file', '/tmp/tmpd7jvaqnq']
+[2022-08-19 16:49:44,259] {standard_task_runner.py:80} INFO - Job 124: Subtask validate
+[2022-08-19 16:49:44,335] {task_command.py:370} INFO - Running <TaskInstance: Deepface.validate manual__2022-08-19T16:49:39.469399+00:00 [running]> on host 4669929d2114
+[2022-08-19 16:49:44,452] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Deepface
+AIRFLOW_CTX_TASK_ID=validate
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-19T16:49:39.469399+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-19T16:49:39.469399+00:00
+[2022-08-19 16:49:44,454] {logging_mixin.py:115} INFO - empieza
+[2022-08-19 16:49:44,553] {logging_mixin.py:115} INFO - tenemos los mongos
+[2022-08-19 16:49:55,500] {logging_mixin.py:115} INFO - 1/1 [==============================] - ETA: 0s
+[2022-08-19 16:49:55,502] {logging_mixin.py:115} INFO - 1/1 [==============================] - 2s 2s/step
+[2022-08-19 16:49:56,270] {logging_mixin.py:115} INFO - 1/1 [==============================] - ETA: 0s
+[2022-08-19 16:49:56,270] {logging_mixin.py:115} INFO - 1/1 [==============================] - 1s 583ms/step
+[2022-08-19 16:49:56,284] {logging_mixin.py:115} INFO - is late
+[2022-08-19 16:49:56,284] {logging_mixin.py:115} INFO - newAttendance:  {'date': datetime.datetime(2022, 7, 19, 13, 15), 'course': 'perez', 'state': 'tarde'}
+[2022-08-19 16:49:56,334] {logging_mixin.py:115} INFO - new:  {'_id': ObjectId('62ffb68102915c153f776a10')}
+[2022-08-19 16:49:57,557] {logging_mixin.py:115} INFO - 1/1 [==============================] - ETA: 0s
+[2022-08-19 16:49:57,558] {logging_mixin.py:115} INFO - 1/1 [==============================] - 0s 498ms/step
+[2022-08-19 16:49:58,422] {logging_mixin.py:115} INFO - 1/1 [==============================] - ETA: 0s
+[2022-08-19 16:49:58,422] {logging_mixin.py:115} INFO - 1/1 [==============================] - 0s 435ms/step
+[2022-08-19 16:49:58,432] {logging_mixin.py:115} INFO - is late
+[2022-08-19 16:49:58,432] {logging_mixin.py:115} INFO - newAttendance:  {'date': datetime.datetime(2022, 7, 19, 13, 15), 'course': 'perez', 'state': 'tarde'}
+[2022-08-19 16:49:58,483] {logging_mixin.py:115} INFO - new:  {'_id': ObjectId('62ffb60467e06348878db37b')}
+[2022-08-19 16:49:58,573] {python.py:173} INFO - Done. Returned value was: None
+[2022-08-19 16:49:58,593] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=Deepface, task_id=validate, execution_date=20220819T164939, start_date=20220819T164944, end_date=20220819T164958
+[2022-08-19 16:49:58,826] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-19 16:49:58,932] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check

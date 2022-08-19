@@ -1,0 +1,24 @@
+[2022-08-19 16:15:37,524] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Deepface.validate manual__2022-08-19T16:15:31.389656+00:00 [queued]>
+[2022-08-19 16:15:37,811] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Deepface.validate manual__2022-08-19T16:15:31.389656+00:00 [queued]>
+[2022-08-19 16:15:37,811] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-19 16:15:37,811] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-08-19 16:15:37,811] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-19 16:15:37,848] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): validate> on 2022-08-19 16:15:31.389656+00:00
+[2022-08-19 16:15:37,862] {standard_task_runner.py:52} INFO - Started process 130 to run task
+[2022-08-19 16:15:37,875] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Deepface', 'validate', 'manual__2022-08-19T16:15:31.389656+00:00', '--job-id', '108', '--raw', '--subdir', 'DAGS_FOLDER/deepface.py', '--cfg-path', '/tmp/tmpmpb5htha', '--error-file', '/tmp/tmpys42zyjw']
+[2022-08-19 16:15:37,876] {standard_task_runner.py:80} INFO - Job 108: Subtask validate
+[2022-08-19 16:15:37,983] {task_command.py:370} INFO - Running <TaskInstance: Deepface.validate manual__2022-08-19T16:15:31.389656+00:00 [running]> on host 4669929d2114
+[2022-08-19 16:15:38,671] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Deepface
+AIRFLOW_CTX_TASK_ID=validate
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-19T16:15:31.389656+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-19T16:15:31.389656+00:00
+[2022-08-19 16:15:46,083] {python.py:173} INFO - Done. Returned value was: None
+[2022-08-19 16:15:46,106] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=Deepface, task_id=validate, execution_date=20220819T161531, start_date=20220819T161537, end_date=20220819T161546
+[2022-08-19 16:15:46,160] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-19 16:15:46,202] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
