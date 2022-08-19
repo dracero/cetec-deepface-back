@@ -74,7 +74,10 @@ dockercompose up
 ```
 
 ## Agregar variables
-Para agregar variables de entorno, acceder a la UI de Apache Airflow, y desde el menú Admin -> Variables.
+Para agregar variables de entorno, acceder a la UI de Apache Airflow, y desde el menú Admin -> Variables. Hay que agregar las siguientes:
+- MONGO_URL
+- EMAIL_USER
+- EMAIL_PASSWORD
 
 ### Más info
 https://airflow.apache.org/docs/apache-airflow/stable/howto/variable.html
