@@ -84,39 +84,6 @@ def notify_unvalidated(not_verified):
 
             print ("Something went wrong….",ex)
 
-def notify_unvalidated(not_verified):
-    gmail_user = Variable.get("EMAIL_USER")
-    gmail_password = Variable.get("EMAIL_PASSWORD")
-
-    for mail,students_to_verify in not_verified.items():
-        if not students_to_verify:
-            subject = SUCCESS_SUBJECT
-            body = SUCCESS_BODY
-        else:
-            subject = FAIL_SUBJECT
-            body = FAIL_BODY
-            for name,email in students_to_verify:
-                body += '     - ' + name + ' - ' + email + '\n'
-
-        msg = EmailMessage()
-        msg.set_content(body)
-        msg['Subject'] = subject
-        msg['From'] = gmail_user
-        msg['To'] = mail
-
-        try:
-            smtp_server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-            smtp_server.ehlo()
-            smtp_server.login(gmail_user, gmail_password)
-            smtp_server.send_message(msg)
-            smtp_server.close()
-
-            print ("Email sent successfully!")
-
-        except Exception as ex:
-
-            print ("Something went wrong….",ex)
-
 def _validate():
     client = MongoClient(Variable.get("MONGO_URL"))
     db = client["myFirstDatabase"]
