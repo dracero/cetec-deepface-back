@@ -1,37 +1,0 @@
-[2022-08-19 01:24:33,373] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Deepface.validate manual__2022-08-19T01:24:26.983183+00:00 [queued]>
-[2022-08-19 01:24:33,566] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Deepface.validate manual__2022-08-19T01:24:26.983183+00:00 [queued]>
-[2022-08-19 01:24:33,567] {taskinstance.py:1356} INFO - 
---------------------------------------------------------------------------------
-[2022-08-19 01:24:33,567] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
-[2022-08-19 01:24:33,567] {taskinstance.py:1358} INFO - 
---------------------------------------------------------------------------------
-[2022-08-19 01:24:33,587] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): validate> on 2022-08-19 01:24:26.983183+00:00
-[2022-08-19 01:24:33,594] {standard_task_runner.py:52} INFO - Started process 276 to run task
-[2022-08-19 01:24:33,598] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Deepface', 'validate', 'manual__2022-08-19T01:24:26.983183+00:00', '--job-id', '512', '--raw', '--subdir', 'DAGS_FOLDER/deepface.py', '--cfg-path', '/tmp/tmps15udhmn', '--error-file', '/tmp/tmp1qap2nt3']
-[2022-08-19 01:24:33,599] {standard_task_runner.py:80} INFO - Job 512: Subtask validate
-[2022-08-19 01:24:33,649] {task_command.py:370} INFO - Running <TaskInstance: Deepface.validate manual__2022-08-19T01:24:26.983183+00:00 [running]> on host 8d6926cc8b63
-[2022-08-19 01:24:33,730] {taskinstance.py:1571} INFO - Exporting the following env vars:
-AIRFLOW_CTX_DAG_EMAIL=***@example.com
-AIRFLOW_CTX_DAG_OWNER=***
-AIRFLOW_CTX_DAG_ID=Deepface
-AIRFLOW_CTX_TASK_ID=validate
-AIRFLOW_CTX_EXECUTION_DATE=2022-08-19T01:24:26.983183+00:00
-AIRFLOW_CTX_TRY_NUMBER=1
-AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-19T01:24:26.983183+00:00
-[2022-08-19 01:24:40,328] {logging_mixin.py:115} INFO - 1/1 [==============================] - ETA: 0s
-[2022-08-19 01:24:40,328] {logging_mixin.py:115} INFO - 1/1 [==============================] - 1s 580ms/step
-[2022-08-19 01:24:40,738] {logging_mixin.py:115} INFO - 1/1 [==============================] - ETA: 0s
-[2022-08-19 01:24:40,738] {logging_mixin.py:115} INFO - 1/1 [==============================] - 0s 293ms/step
-[2022-08-19 01:24:40,740] {taskinstance.py:1889} ERROR - Task failed with exception
-Traceback (most recent call last):
-  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 171, in execute
-    return_value = self.execute_callable()
-  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 189, in execute_callable
-    return self.python_callable(*self.op_args, **self.op_kwargs)
-  File "/opt/airflow/dags/deepface.py", line 152, in _validate
-    col_verified.insert_one({'email':attendee['email'], 'course':attendee['course'], 'state':state, 'date':attendee['date'], 'image':attendee['image']})
-UnboundLocalError: local variable 'state' referenced before assignment
-[2022-08-19 01:24:40,748] {taskinstance.py:1400} INFO - Marking task as UP_FOR_RETRY. dag_id=Deepface, task_id=validate, execution_date=20220819T012426, start_date=20220819T012433, end_date=20220819T012440
-[2022-08-19 01:24:40,762] {standard_task_runner.py:97} ERROR - Failed to execute job 512 for task validate (local variable 'state' referenced before assignment; 276)
-[2022-08-19 01:24:40,812] {local_task_job.py:156} INFO - Task exited with return code 1
-[2022-08-19 01:24:40,836] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
