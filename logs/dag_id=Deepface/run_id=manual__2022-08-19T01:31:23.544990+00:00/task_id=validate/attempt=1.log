@@ -1,0 +1,32 @@
+[2022-08-19 01:31:29,026] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Deepface.validate manual__2022-08-19T01:31:23.544990+00:00 [queued]>
+[2022-08-19 01:31:29,285] {taskinstance.py:1159} INFO - Dependencies all met for <TaskInstance: Deepface.validate manual__2022-08-19T01:31:23.544990+00:00 [queued]>
+[2022-08-19 01:31:29,286] {taskinstance.py:1356} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-19 01:31:29,287] {taskinstance.py:1357} INFO - Starting attempt 1 of 2
+[2022-08-19 01:31:29,288] {taskinstance.py:1358} INFO - 
+--------------------------------------------------------------------------------
+[2022-08-19 01:31:29,338] {taskinstance.py:1377} INFO - Executing <Task(PythonOperator): validate> on 2022-08-19 01:31:23.544990+00:00
+[2022-08-19 01:31:29,350] {standard_task_runner.py:52} INFO - Started process 85 to run task
+[2022-08-19 01:31:29,361] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'Deepface', 'validate', 'manual__2022-08-19T01:31:23.544990+00:00', '--job-id', '516', '--raw', '--subdir', 'DAGS_FOLDER/deepface.py', '--cfg-path', '/tmp/tmpuieiqan5', '--error-file', '/tmp/tmp_a_2vt94']
+[2022-08-19 01:31:29,362] {standard_task_runner.py:80} INFO - Job 516: Subtask validate
+[2022-08-19 01:31:29,468] {task_command.py:370} INFO - Running <TaskInstance: Deepface.validate manual__2022-08-19T01:31:23.544990+00:00 [running]> on host 8d6926cc8b63
+[2022-08-19 01:31:29,656] {taskinstance.py:1571} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_EMAIL=***@example.com
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Deepface
+AIRFLOW_CTX_TASK_ID=validate
+AIRFLOW_CTX_EXECUTION_DATE=2022-08-19T01:31:23.544990+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-08-19T01:31:23.544990+00:00
+[2022-08-19 01:31:37,268] {logging_mixin.py:115} INFO - 1/1 [==============================] - ETA: 0s
+[2022-08-19 01:31:37,268] {logging_mixin.py:115} INFO - 1/1 [==============================] - 1s 1s/step
+[2022-08-19 01:31:38,654] {logging_mixin.py:115} INFO - 1/1 [==============================] - ETA: 0s
+[2022-08-19 01:31:38,654] {logging_mixin.py:115} INFO - 1/1 [==============================] - 1s 1s/step
+[2022-08-19 01:31:43,361] {logging_mixin.py:115} INFO - 1/1 [==============================] - ETA: 0s
+[2022-08-19 01:31:43,362] {logging_mixin.py:115} INFO - 1/1 [==============================] - 1s 1s/step
+[2022-08-19 01:31:45,475] {logging_mixin.py:115} INFO - 1/1 [==============================] - ETA: 0s
+[2022-08-19 01:31:45,475] {logging_mixin.py:115} INFO - 1/1 [==============================] - 1s 996ms/step
+[2022-08-19 01:31:47,048] {python.py:173} INFO - Done. Returned value was: None
+[2022-08-19 01:31:47,071] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=Deepface, task_id=validate, execution_date=20220819T013123, start_date=20220819T013129, end_date=20220819T013147
+[2022-08-19 01:31:47,172] {local_task_job.py:156} INFO - Task exited with return code 0
+[2022-08-19 01:31:47,213] {local_task_job.py:273} INFO - 0 downstream tasks scheduled from follow-on schedule check
