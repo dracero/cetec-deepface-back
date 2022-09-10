@@ -1,7 +1,7 @@
-FROM apache/airflow:2.3.2
+FROM apache/airflow:latest
 USER airflow
-RUN pip install --no-cache-dir deepface
-RUN pip install --no-cache-dir pymongo
+RUN pip3 install --no-cache-dir --default-timeout=100000  deepface
+RUN pip3 install --no-cache-dir pymongo
 
 USER root
 RUN apt-get update
