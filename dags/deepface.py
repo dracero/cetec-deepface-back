@@ -8,16 +8,12 @@ from pymongo import MongoClient
 from deepface import DeepFace
 import smtplib
 
-import smtplib
-from email.message import EmailMessage
-
-import smtplib
 from email.message import EmailMessage
 
 PRESENT = 'presente'
 LATE = 'tarde'
 EXAM_DATE_MINUTES_MARGIN = 60
-EXAM_EARLY_MARGIN = 30
+EXAM_EARLY_MARGIN = 3
 SUCCESS_SUBJECT = 'Alumnos verificados correctamente'
 SUCCESS_BODY = 'Todos los alumnos han sido reconocidos. No es necesario verificar la asistencia.'
 FAIL_SUBJECT = 'Verificar alumnos'
@@ -39,50 +35,53 @@ def is_same_person(image1, image2):
     result = DeepFace.verify([[image1, image2]],
                             model_name = "VGG-Face",
                             distance_metric = "cosine",
-                            detector_backend = "opencv"
+                            detector_backend = "opencv",
+                            enforce_detection= False
     )
     return result["pair_1"]["verified"]
 
-def is_on_time(date, start):
+def is_on_time(date, start, minutes_margin):
     early_margin = move_date(start, -EXAM_EARLY_MARGIN)
-    return (early_margin <= date <= start)
+    late_margin = move_date(start, minutes_margin)
+    return (early_margin <= start <= date <= late_margin)
 
 def is_late(date, start, minutes_margin):
     late_margin = move_date(start, minutes_margin)
-    return (start < date <= late_margin)
+    return (start < late_margin < date)
 
 def notify_unvalidated(not_verified):
-    gmail_user = Variable.get("EMAIL_USER")
-    gmail_password = Variable.get("EMAIL_PASSWORD")
+    user = Variable.get("EMAIL_USER")
+    pwd = Variable.get("EMAIL_PASSWORD")
 
-    for mail,students_to_verify in not_verified.items():
-        if not students_to_verify:
-            subject = SUCCESS_SUBJECT
-            body = SUCCESS_BODY
-        else:
-            subject = FAIL_SUBJECT
-            body = FAIL_BODY
-            for name,email in students_to_verify:
-                body += '     - ' + name + ' - ' + email + '\n'
+    if not bool(not_verified):
+        SUBJECT = SUCCESS_SUBJECT
+        TEXT = SUCCESS_BODY
+    else:
+        SUBJECT = FAIL_SUBJECT
+        TEXT = FAIL_BODY
+        for name,email in not_verified:
+            TEXT += '     - ' + name + ' - ' + email + '\n'
 
-        msg = EmailMessage()
-        msg.set_content(body)
-        msg['Subject'] = subject
-        msg['From'] = gmail_user
-        msg['To'] = mail
-
-        try:
-            smtp_server = smtplib.SMTP_SSL('smtp.gmail.com', 465)
-            smtp_server.ehlo()
-            smtp_server.login(gmail_user, gmail_password)
-            smtp_server.send_message(msg)
-            smtp_server.close()
-
-            print ("Email sent successfully!")
-
-        except Exception as ex:
-
-            print ("Something went wrong….",ex)
+    recipient = "diego.racero@ing-racero.com.ar"
+    
+    FROM = user
+    TO = recipient if isinstance(recipient, list) else [recipient]
+    
+    # Prepare actual message
+    message = """From: %s\nTo: %s\nSubject: %s\n\n%s
+    """ % (FROM, ", ".join(TO), SUBJECT, TEXT)
+    try:
+        server_ssl = smtplib.SMTP_SSL("smtp.gmail.com", 465)
+        server_ssl.ehlo() # optional, called by login()
+        server_ssl.login(user, pwd)  
+        # ssl server doesn't support or need tls, so don't call server_ssl.starttls() 
+        server_ssl.sendmail(FROM, TO, message)
+        #server_ssl.quit()
+        server_ssl.close()
+        print ('successfully sent the mail')
+    except:
+        print ("failed to send mail")
+ 
 
 def _validate():
     client = MongoClient(Variable.get("MONGO_URL"))
@@ -111,7 +110,7 @@ def _validate():
             continue
 
         state = ''
-        if is_on_time(attendee['date'], exam['start']):
+        if is_on_time(attendee['date'], exam['start'], exam['startMinutesMargin']):
             state = PRESENT
         elif is_late(attendee['date'], exam['start'], exam['startMinutesMargin']):
             state = LATE

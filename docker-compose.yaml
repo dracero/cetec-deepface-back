@@ -102,7 +102,7 @@ services:
     <<: *airflow-common
     command: webserver
     ports:
-      - 8080:8080
+      - $PORT:$PORT
     healthcheck:
       test: ["CMD", "curl", "--fail", "http://localhost:8080/health"]
       interval: 10s
@@ -232,6 +232,8 @@ services:
     # yamllint enable rule:line-length
     environment:
       <<: *airflow-common-env
+      _AIRFLOW_UID: 1000
+      _AIRFLOW_GID: 0
       _AIRFLOW_DB_UPGRADE: 'true'
       _AIRFLOW_WWW_USER_CREATE: 'true'
       _AIRFLOW_WWW_USER_USERNAME: ${_AIRFLOW_WWW_USER_USERNAME:-airflow}
